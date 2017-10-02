@@ -1,6 +1,6 @@
 {
   "name": "react-native-expandable-section-flatlist",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "react-native-expandable-section-flatlist is a expandable list what is similar to QQ's list of Tencent, it's extend Flatlist feat ",
   "main": "index.js",
   "directories": {
@@ -23,5 +23,8 @@
   "bugs": {
     "url": "https://github.com/cuiyueshuai/react-native-expandable-section-flatlist/issues"
   },
-  "homepage": "https://github.com/cuiyueshuai/react-native-expandable-section-flatlist#readme"
+  "homepage": "https://github.com/cuiyueshuai/react-native-expandable-section-flatlist#readme",
+  "dependencies": {
+    "prop-types": "^15.6.0"
+  }
 }
