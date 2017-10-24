@@ -59,7 +59,7 @@ class ExpanableList extends Component {
     });
 
     if (this.props.headerOnPress) {
-      this.prop.headerOnPress(i, this.state.memberOpened.get(i) || false);
+      this.props.headerOnPress(i, this.state.memberOpened.get(i) || false);
     }
 
     LayoutAnimation.easeInEaseOut();
