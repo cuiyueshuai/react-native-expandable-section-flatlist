@@ -9,6 +9,7 @@ import React from 'react';
 import {
   View,
   Text,
+  Button,
   TouchableOpacity,
   AppRegistry,
 } from 'react-native';
@@ -53,16 +54,38 @@ class Example extends React.PureComponent {
     );
   };
 
+  _headerOnPress = (i, item) => {
+    console.log(i, item);
+  };
+
+  _btnPress = () => {
+    // this.ExpandableList.scrollToEnd();
+    // this.ExpandableList.scrollToIndex({ index: 3 });
+    this.ExpandableList.scrollToSection({ section: 4 }); // The starting point of a section is 0;
+  };
+
   render() {
     return (
-      <ExpandableList
-        dataSource={MockData.workbenchData}
-        headerKey="title"
-        memberKey="member"
-        renderRow={this._renderRow}
-        renderSectionHeaderX={this._renderSection}
-        openOptions={[1,2,]}
-      />
+      <View style={{ flex: 1 }}>
+        <ExpandableList
+          ref={instance => this.ExpandableList = instance}
+          isOpen={true}
+          dataSource={MockData.workbenchData}
+          headerKey="title"
+          memberKey="member"
+          renderRow={this._renderRow}
+          renderSectionHeaderX={this._renderSection}
+          openOptions={[1,2,]}
+          headerOnPress={this._headerOnPress}
+          rowNumberCloseMode={0}
+        />
+        <Button
+          style={{ position: 'absolute', bottom: 0, left: 0, width: '100%', height: 50, backgroundColor: 'blue' }}
+          onPress={this._btnPress}
+          title="Scroll"
+          color="red"
+        />
+      </View>
     );
   }
 }

@@ -80,7 +80,21 @@ class Example extends React.PureComponent {
 | headerOnPress | false | `boolean` | 点击打开关闭列表分组组头的回调 |
 | isOpen | false | `boolean` | 默认是否打开全部分组 |
 | openOptions | - | `array` | 可选单独打开某几个分组 |
+| rowNumberCloseMode | - | `number` | 关闭分组状态下仍然渲染行个数 |
 
+方法
+-------------------------------------------
+
+`scrollToSection`: 滑动到指定分组
+
+```
+scrollToSection(params)
+```
+
+有效的params属性：
+
+* 'animated' (boolean) - 列表滑动时是否包含动画，默认值`true`
+* 'section' (number) - 列表滑动到指定分组的分组下标，必需属性
 
 Licence
 -------------------------------------------
