@@ -85,16 +85,26 @@ class Example extends React.PureComponent {
 方法
 -------------------------------------------
 
-`scrollToSection`: 滑动到指定分组
+* `scrollToSection`: 滑动到指定分组
 
-```
-scrollToSection(params)
-```
+    ```
+    scrollToSection(params)
+    ```
+    
+    有效的params属性：
+    
+    * 'animated' (boolean) - 列表滑动时是否包含动画，默认值`true`
+    * 'section' (number) - 列表滑动到指定分组的分组下标，必需属性
 
-有效的params属性：
+* `setSectionState`: 改变分组状态
 
-* 'animated' (boolean) - 列表滑动时是否包含动画，默认值`true`
-* 'section' (number) - 列表滑动到指定分组的分组下标，必需属性
+    ```
+    setSectionState(index, state)
+    ```
+    
+    * 'index' (number) - 设置分组状态的下标
+    * 'state' (bool) - 分组状态设置，`true`为open，`false`为close
+
 
 Licence
 -------------------------------------------

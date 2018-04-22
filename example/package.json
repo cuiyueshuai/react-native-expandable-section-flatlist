@@ -9,7 +9,7 @@
   "dependencies": {
     "react": "16.0.0-alpha.12",
     "react-native": "0.45.1",
-    "react-native-expandable-section-flatlist": "^1.1.3",
+    "react-native-expandable-section-flatlist": "^1.1.5",
     "react-native-expandable-section-list": "^1.0.1"
   },
   "devDependencies": {

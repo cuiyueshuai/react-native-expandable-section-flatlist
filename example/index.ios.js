@@ -61,7 +61,8 @@ class Example extends React.PureComponent {
   _btnPress = () => {
     // this.ExpandableList.scrollToEnd();
     // this.ExpandableList.scrollToIndex({ index: 3 });
-    this.ExpandableList.scrollToSection({ section: 4 }); // The starting point of a section is 0;
+    // this.ExpandableList.scrollToSection({ section: 4 }); // The starting point of a section is 0;
+    this.ExpandableList.setSectionState(1, false);
   };
 
   render() {
@@ -69,7 +70,6 @@ class Example extends React.PureComponent {
       <View style={{ flex: 1 }}>
         <ExpandableList
           ref={instance => this.ExpandableList = instance}
-          isOpen={true}
           dataSource={MockData.workbenchData}
           headerKey="title"
           memberKey="member"

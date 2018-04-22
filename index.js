@@ -3,7 +3,7 @@
  * Copyright cuiyueshuai
  * @author cuiyueshuai<850705402@qq.com>
  */
- 
+
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import {
@@ -70,6 +70,15 @@ class ExpandableList extends Component {
     this.flatList.scrollToOffset({ animated, offset });
   };
 
+  setSectionState = (index, state) => {
+    this.setState((s) => {
+      const memberOpened = new Map(s.memberOpened);
+      memberOpened.set(index, state); // toggle
+      return {memberOpened};
+    });
+    LayoutAnimation.easeInEaseOut();
+  }
+
   _onPress = (i) => {
     this.setState((state) => {
       const memberOpened = new Map(state.memberOpened);
@@ -77,7 +86,7 @@ class ExpandableList extends Component {
       return { memberOpened };
     });
     if (this.props.headerOnPress) {
-      this.props.headerOnPress(i, this.state.memberOpened.get(i) || false);
+      this.props.headerOnPress(i, !(!!this.state.memberOpened.get(i)));
     }
     LayoutAnimation.easeInEaseOut();
   };
@@ -108,7 +117,8 @@ class ExpandableList extends Component {
     return (
       <View onLayout={this._itemLayout}>
         <TouchableOpacity onPress={() => this._onPress(sectionId)}>
-          { renderSectionHeaderX ? renderSectionHeaderX(item[headerKey], sectionId) : null}
+          { renderSectionHeaderX ? renderSectionHeaderX(item[headerKey], sectionId,
+              !!this.state.memberOpened.get(sectionId)) : null}
         </TouchableOpacity>
         <ScrollView scrollEnabled={false}>
           {
@@ -138,11 +148,11 @@ class ExpandableList extends Component {
     return (
       <FlatList
         keyExtractor={this._keyExtractor}
+        extraData={this.state}
         {...this.props}
         ref={instance => this.flatList = instance}
         getItemLayout={this._getItemLayout}
         data={dataSource}
-        extraData={this.state}
         horizontal={false}
         renderItem={this._renderItem}
       />
