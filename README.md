@@ -1,5 +1,7 @@
 react-native-expandable-section-flatlist
 ================================================
+
+[https://www.npmjs.com/package/react-native-expandable-section-flatlist](https://www.npmjs.com/package/react-native-expandable-section-flatlist)
   
 react-native-expandable-section-flatlist 是一个纯js编写的可伸缩列表，类似于QQ列表形式，在react-native 0.43后，大列表推荐使用FlatList，作为FlatList的扩展组件，能同时运行在android和iOS双平台下,并同时支持原FlatList的大部分属性
 
