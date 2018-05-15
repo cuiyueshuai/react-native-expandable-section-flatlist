@@ -149,6 +149,7 @@ class ExpandableList extends Component {
       <FlatList
         keyExtractor={this._keyExtractor}
         extraData={this.state}
+        initialNumToRender={dataSource.length || 0}
         {...this.props}
         ref={instance => this.flatList = instance}
         getItemLayout={this._getItemLayout}
