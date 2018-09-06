@@ -52,7 +52,7 @@ class ExpandableList extends Component {
     rowNumberCloseMode: 0,
   };
 
-  _keyExtractor = (item, index) => index;
+  _keyExtractor = (item, index) => index.toString();
   scrollToEnd = (params) => this.flatList.scrollToEnd(params);
   scrollToIndex = (params) => this.flatList.scrollToIndex(params);
   scrollToItem = (params) => this.flatList.scrollToItem(params);
