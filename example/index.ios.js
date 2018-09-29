@@ -55,14 +55,14 @@ class Example extends React.PureComponent {
   };
 
   _headerOnPress = (i, item) => {
-    console.log(i, item);
+    // console.log(i, item);
   };
 
   _btnPress = () => {
     // this.ExpandableList.scrollToEnd();
     // this.ExpandableList.scrollToIndex({ index: 3 });
-    // this.ExpandableList.scrollToSection({ section: 4 }); // The starting point of a section is 0;
-    this.ExpandableList.setSectionState(1, false);
+    this.ExpandableList.scrollToSection({ section: 1 }); // The starting point of a section is 0;
+    // this.ExpandableList.setSectionState(1, false);
   };
 
   render() {
