@@ -13,6 +13,7 @@ import {
   ScrollView,
   LayoutAnimation,
   TouchableOpacity,
+  StyleSheet,
 } from 'react-native';
 
 class ExpandableList extends Component {
@@ -43,6 +44,7 @@ class ExpandableList extends Component {
     isOpen: PropTypes.bool,
     openOptions: PropTypes.array,
     rowNumberCloseMode: PropTypes.number,
+    rowEnabled: PropTypes.bool,
   };
 
   static defaultProps = {
@@ -50,6 +52,7 @@ class ExpandableList extends Component {
     memberKey: 'member',
     isOpen: false,
     rowNumberCloseMode: 0,
+    rowEnabled: false,
   };
 
   _keyExtractor = (item, index) => index.toString();
@@ -120,7 +123,10 @@ class ExpandableList extends Component {
           { renderSectionHeaderX ? renderSectionHeaderX(item[headerKey], sectionId,
               !!this.state.memberOpened.get(sectionId)) : null}
         </TouchableOpacity>
-        <ScrollView scrollEnabled={false}>
+        <ScrollView
+          scrollEnabled={false}
+          contentContainerStyle={this.props.rowEnabled ? styles.row : null}
+        >
           {
             memberArr.map((rowItem, rowId) => {
               return (
@@ -161,5 +167,12 @@ class ExpandableList extends Component {
     );
   }
 }
+
+const styles = StyleSheet.create({
+	row: {
+		flexDirection: 'row',
+		flexWrap: 'wrap'
+	}
+});
 
 export default ExpandableList;
