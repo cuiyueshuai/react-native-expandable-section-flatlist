@@ -138,9 +138,10 @@ class ExpandableList extends Component {
 
   _getItemLayout = (data, index) => {
     let offset = 0;
+    const item_height = this.layoutStore[index].layout.height;
     this.layoutStore.forEach(item => offset = offset + item.layout.height);
     this.props.getItemLayout && this.props.getItemLayout(data, index);
-    return { length: offset / index, offset: offset, index };
+    return { length: item_height, offset: offset, index };
   };
 
   render() {

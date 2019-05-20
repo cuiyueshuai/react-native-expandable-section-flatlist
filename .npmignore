@@ -1,3 +1,9 @@
-# Dependency directories
-node_modules/
-jspm_packages/
+**/__mocks__/**
+**/__tests__/**
+example
+node_modules
+jspm_packages
+
+
+src
+yarn.lock
