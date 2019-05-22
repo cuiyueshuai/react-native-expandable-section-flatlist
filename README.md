@@ -24,14 +24,18 @@ npm install react-native-expandable-section-flatlist --save
 
 **数据源：**
 
+ * `key` fields are optional, but recommended if source data contains unique ids
+
 ```
   const MockData = [
         ...
         {
+            key: '<unique-id>',
             header: 'sectionHeader',
             member: [
             ...
                 {
+                    key: '<unique-id>',
                     title: 'memberTitle',
                     content: 'content',
                 },

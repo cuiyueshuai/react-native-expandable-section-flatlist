@@ -55,7 +55,7 @@ class ExpandableList extends Component {
     rowEnabled: false,
   };
 
-  _keyExtractor = (item, index) => index.toString();
+  _keyExtractor = (item, index) => item.key ? "flat-" + item.key : "flat-" + index;
   scrollToEnd = (params) => this.flatList.scrollToEnd(params);
   scrollToIndex = (params) => this.flatList.scrollToIndex(params);
   scrollToItem = (params) => this.flatList.scrollToItem(params);
@@ -130,7 +130,7 @@ class ExpandableList extends Component {
           {
             memberArr.map((rowItem, rowId) => {
               return (
-                <View key={rowId}>
+                <View key={rowItem.key ? "scroll-" + rowItem.key : "scroll-" + rowId}>
                   {renderRow ? renderRow(rowItem, rowId, index) : null}
                 </View>
               );
