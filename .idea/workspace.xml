@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="f0a1b522-e3b2-47b0-afbf-7a84276e5ee5" name="Default" comment="fix: error: malformed calls from JS: field sizes are different after version 0.58">
+    <list default="true" id="f0a1b522-e3b2-47b0-afbf-7a84276e5ee5" name="Default" comment="fix: remove getItemLayout in the flatlist">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
@@ -23,8 +23,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/package.json">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="195">
-              <caret line="13" column="35" lean-forward="true" selection-start-line="13" selection-start-column="35" selection-end-line="13" selection-end-column="35" />
+            <state relative-caret-position="45">
+              <caret line="3" column="29" lean-forward="true" selection-start-line="3" selection-start-column="29" selection-end-line="3" selection-end-column="29" />
             </state>
           </provider>
         </entry>
@@ -50,8 +50,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/index.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="291">
-              <caret line="158" column="48" lean-forward="true" selection-start-line="158" selection-start-column="48" selection-end-line="158" selection-end-column="48" />
+            <state relative-caret-position="195">
+              <caret line="27" column="25" selection-start-line="27" selection-start-column="25" selection-end-line="27" selection-end-column="25" />
             </state>
           </provider>
         </entry>
@@ -60,7 +60,7 @@
         <entry file="file://$PROJECT_DIR$/.npmignore">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="135">
-              <caret line="9" lean-forward="true" selection-start-line="9" selection-end-line="9" />
+              <caret line="9" selection-start-line="9" selection-end-line="9" />
             </state>
           </provider>
         </entry>
@@ -107,6 +107,7 @@
   <component name="FindInProjectRecents">
     <findStrings>
       <find>LayoutAnimation</find>
+      <find>memberOpened</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -130,9 +131,9 @@
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="136" />
+    <option name="x" value="15" />
     <option name="y" value="23" />
-    <option name="width" value="1440" />
+    <option name="width" value="1265" />
     <option name="height" value="777" />
   </component>
   <component name="ProjectView">
@@ -247,7 +248,11 @@
       <workItem from="1538181066927" duration="785000" />
       <workItem from="1558339600432" duration="84000" />
       <workItem from="1558341035969" duration="214000" />
-      <workItem from="1558681715086" duration="25000" />
+      <workItem from="1558681715086" duration="118000" />
+      <workItem from="1558684666487" duration="249000" />
+      <workItem from="1558685138945" duration="87000" />
+      <workItem from="1558685804391" duration="59000" />
+      <workItem from="1558685876879" duration="2795000" />
     </task>
     <task id="LOCAL-00001" summary="Feat: add function and new property, update version 1.1.3&#10; - add function of scrollToSection&#10; - add rowNumberClose&#10;For details, please refer to README.md">
       <created>1522921417044</created>
@@ -291,14 +296,21 @@
       <option name="project" value="LOCAL" />
       <updated>1558341187702</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="fix: remove getItemLayout in the flatlist">
+      <created>1558681809580</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1558681809581</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="29680000" />
+    <option name="totallyTimeSpent" value="32963000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="136" y="23" width="1440" height="777" extended-state="0" />
+    <frame x="-19" y="23" width="1440" height="777" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.26638478" />
@@ -349,6 +361,16 @@
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
+  <component name="Vcs.Log.History.Properties">
+    <option name="COLUMN_ORDER">
+      <list>
+        <option value="0" />
+        <option value="2" />
+        <option value="3" />
+        <option value="1" />
+      </list>
+    </option>
+  </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
       <map>
@@ -396,7 +418,8 @@
     <MESSAGE value="feat: publish v1.1.8" />
     <MESSAGE value="feat: add npmignore" />
     <MESSAGE value="fix: error: malformed calls from JS: field sizes are different after version 0.58" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix: error: malformed calls from JS: field sizes are different after version 0.58" />
+    <MESSAGE value="fix: remove getItemLayout in the flatlist" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix: remove getItemLayout in the flatlist" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -453,7 +476,7 @@
     <entry file="file://$PROJECT_DIR$/.npmignore">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="135">
-          <caret line="9" lean-forward="true" selection-start-line="9" selection-end-line="9" />
+          <caret line="9" selection-start-line="9" selection-end-line="9" />
         </state>
       </provider>
     </entry>
@@ -483,15 +506,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/index.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="291">
-          <caret line="158" column="48" lean-forward="true" selection-start-line="158" selection-start-column="48" selection-end-line="158" selection-end-column="48" />
+        <state relative-caret-position="195">
+          <caret line="27" column="25" selection-start-line="27" selection-start-column="25" selection-end-line="27" selection-end-column="25" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/package.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="13" column="35" lean-forward="true" selection-start-line="13" selection-start-column="35" selection-end-line="13" selection-end-column="35" />
+        <state relative-caret-position="45">
+          <caret line="3" column="29" lean-forward="true" selection-start-line="3" selection-start-column="29" selection-end-line="3" selection-end-column="29" />
         </state>
       </provider>
     </entry>

@@ -17,22 +17,6 @@ import {
 } from 'react-native';
 
 class ExpandableList extends Component {
-  constructor(props) {
-    super(props);
-    this.flatList;
-    this.layoutStore = [];
-    let map = new Map();
-    if (props.dataSource && props.isOpen) {
-      props.dataSource.map((item, i) => map.set(i, true))
-    }
-    if (props.openOptions) {
-      props.openOptions.map((item) => map.set(item, true))
-    }
-    this.state = {
-      memberOpened: map
-    }
-  }
-
   static propTypes = {
     dataSource: PropTypes.array.isRequired,
     headerKey: PropTypes.string,
@@ -54,6 +38,27 @@ class ExpandableList extends Component {
     rowNumberCloseMode: 0,
     rowEnabled: false,
   };
+
+  constructor(props) {
+    super(props);
+    this.flatList;
+    this.layoutStore = [];
+    const map = new Map();
+    if (props.openOptions) {
+      props.openOptions.forEach((item) => map.set(item, true))
+    }
+    this.state = {
+      memberOpened: map
+    }
+  }
+
+  componentDidUpdate(prevProps) {
+    if (this.props.dataSource.length !== prevProps.dataSource.length && this.props.isOpen) {
+      const map = new Map();
+      this.props.dataSource.forEach((item, i) => map.set(i, true));
+      this.setState({ memberOpened: map });
+    }
+  }
 
   _keyExtractor = (item, index) => index.toString();
   scrollToEnd = (params) => this.flatList.scrollToEnd(params);
@@ -80,7 +85,7 @@ class ExpandableList extends Component {
       return {memberOpened};
     });
     LayoutAnimation.easeInEaseOut();
-  }
+  };
 
   _onPress = (i) => {
     this.setState((state) => {
