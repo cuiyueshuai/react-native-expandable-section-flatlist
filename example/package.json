@@ -8,14 +8,14 @@
   },
   "dependencies": {
     "react": "16.0.0-alpha.12",
-    "react-native": "0.45.1",
+    "react-native": "0.71.4",
     "react-native-expandable-section-flatlist": "^1.1.8",
     "react-native-expandable-section-list": "^1.0.1"
   },
   "devDependencies": {
-    "babel-jest": "20.0.3",
+    "babel-jest": "29.5.0",
     "babel-preset-react-native": "2.0.0",
-    "jest": "20.0.4",
+    "jest": "29.5.0",
     "react-test-renderer": "16.0.0-alpha.12"
   },
   "jest": {
