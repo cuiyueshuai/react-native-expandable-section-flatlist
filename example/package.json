@@ -15,7 +15,7 @@
   "devDependencies": {
     "babel-jest": "20.0.3",
     "babel-preset-react-native": "2.0.0",
-    "jest": "20.0.4",
+    "jest": "29.5.0",
     "react-test-renderer": "16.0.0-alpha.12"
   },
   "jest": {
